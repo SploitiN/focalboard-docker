@@ -35,8 +35,7 @@ RUN git clone https://github.com/mattermost/focalboard.git /focalboard
 WORKDIR /focalboard
 
 # Build frontend
-WORKDIR /focalboard/webapp
-RUN npm install && npm run build
+FROM mattermost/focalboard:latest
 
 # Build backend
 WORKDIR /focalboard/server
